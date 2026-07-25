@@ -17,9 +17,9 @@
 
 | 组件 | 规格 | 说明 |
 |------|------|------|
-| 主控 | ESP32-S3-WROOM-1 | 双核 240MHz, 4MB Flash, OPI PSRAM |
+| 主控 | ESP32-S3-WROOM-1 | 双核 240MHz, 16MB Flash |
 | 屏幕 | 大连佳显 GDEP133C02 | 13.3寸, 1200x1600, 六色 (黑/白/黄/红/蓝/绿) |
-| 存储 | 内置 Flash (LittleFS) | 分区方案: Huge APP (3MB No OTA / 1MB SPIFFS) |
+| 存储 | 内置 Flash (LittleFS) | 分区方案: Huge APP ((3MB APP/9.9MB FATFS)) |
 
 ### GDEP133C02 屏幕特性
 
@@ -79,7 +79,7 @@
 ### 2. 分区方案
 
 ```
-工具 -> Partition Scheme -> Huge APP (3MB No OTA / 1MB SPIFFS)
+工具 -> Partition Scheme -> 16M Flash (3MB APP/9.9MB FATFS)
 ```
 
 ### 3. 其他设置
@@ -88,7 +88,7 @@
 |--------|-------|
 | CPU Frequency | 240MHz |
 | Flash Mode | QIO |
-| Flash Size | 4MB |
+| Flash Size | 16MB |
 | PSRAM | OPI PSRAM |
 | Upload Speed | 921600 |
 
